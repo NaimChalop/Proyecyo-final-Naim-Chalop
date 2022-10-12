@@ -137,16 +137,14 @@ justify-content: center;}
     width: 10em;
     height: 10em;
     background-color: aquamarine;
-    background-size: auto;
     background-position: center;
     color: rgb(136, 130, 130);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 3%;
-    text-align: center;
     margin:  0.313em;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .beneficio1::before{
@@ -181,14 +179,11 @@ justify-content: center;}
     width: 10em;
     height: 10em;
     background-color: aquamarine;
-    background-size: auto;
-    background-position: center;
     color: rgb(136, 130, 130);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 3%;
-    text-align: center;
     margin:  0.313em;
     overflow: hidden;
 }
@@ -227,14 +222,12 @@ justify-content: center;}
     width: 10em;
     height: 10em;
     background-color: aquamarine;
-    background-size: auto;
-    background-position: center;
+
     color: rgb(136, 130, 130);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 3%;
-    text-align: center;
     margin:  0.313em;
     overflow: hidden;
 }
@@ -516,18 +509,98 @@ background-color: #0077B5;
     margin: 1em;
 }
 .l1{
-    grid-area: l1;
-}
+    grid-area: l1;font-weight: 0%;
+    }
 .l2{
-    grid-area:l2 ;
+    grid-area:l2  ;font-weight: 0%;
 }
 
 .boxi{
     display: flex;
     flex-direction: column;
     border: solid 5px aquamarine;
+    padding: 0.5em; 
 }
-@media (min-width: 700px) {
+/* sobre mi */
+.sobriMiGridLayout{
+    padding-top: var(--marginelementos);
+    display: grid; 
+grid-template-areas: 
+"cajaUno"
+"cajaDos"
+"cajaTres";
+justify-content: center;
+align-items: center;
+padding: 1em;margin: 1em;
+}
+.cajaUno{
+    grid-area: cajaUno;padding: 1em;margin: 3em;
+    border: solid 5px aquamarine;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+.cajaDos{
+    grid-area: cajaDos;padding: 1em;margin: 3em;
+    border: solid 5px aquamarine;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+.cajaTres{
+    grid-area: cajaTres;padding: 1em;margin: 3em;
+    border: solid 5px aquamarine;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+@media (min-width: 500px){
+    body{
+        background-color: aquamarine;
+    }
+    .copy,.titulo-seccion{
+        background-color: darkgray;
+        border:solid 5px aliceblue;
+        color: aliceblue;
+        padding: 1em;
+        font-weight: normal;}
+        .beneficio3::after, .beneficio1::after, .beneficio2::after{
+            color: aliceblue;}
+            .sobriMiGridLayout{
+            grid-template-areas: 
+            "cajaUno "
+            "cajaDos"
+            "cajaTres";
+            grid-template-columns: 1fr;}
+            .cajaUno{border:aliceblue solid 5px;
+                background-color: darkgray;
+                color: aliceblue;
+            }
+            .cajaDos{
+                border:aliceblue solid 5px;
+                background-color: darkgray;
+                color: aliceblue;
+            }
+            .cajaTres{border: aliceblue solid 5px;
+                background-color: darkgray;
+                color: aliceblue;
+            }
+            .boxi{
+                
+                border: solid 5px aliceblue;
+                background-color: darkgray;
+                
+            }
+            .decoration{
+                background-color: beige;
+                margin: 2em;
+                border: solid 0.05em;}
+                .envoltorio-contacto{
+                    border: solid aliceblue .4em;
+                }
+                .formulario{
+                    background-color: aliceblue;
+                }
+            
+}
+@media (min-width: 800px) {
     body{
         background-color: beige;
     }
@@ -542,7 +615,31 @@ background-color: #0077B5;
         width: 30%;
         box-shadow: 0 0 0.5em rgb(0, 0, 0, .4);
         margin-bottom: var(--marginelementos);
+        
 }
+.boxi{
+                
+    border: solid 5px darkgray;
+    background-color: beige;
+    
+}
+.sobriMiGridLayout{
+    grid-template-areas: 
+    "cajaUno cajaDos"
+    "cajaUno cajaTres";
+    grid-template-columns: 1.4fr 1fr;}
+    .cajaUno{border:darkgray solid 5px;
+        background-color: beige;
+        color: darkgray;
+    }
+    .cajaDos{border:darkgray solid 5px;
+        background-color: beige;
+        color: darkgray;
+    }
+    .cajaTres{border:darkgray solid 5px;
+        background-color: beige;
+        color: darkgray;
+    }
 .hero{
     height: 31.25em;
     background-color: darkgrey;}
@@ -552,10 +649,12 @@ height: 120%;
     .titulo-seccion{
         color: var(--colortitulos);
         border: none;
+        background-color: beige;
     }
     .copy{
         color: rgb(136, 130, 130);
         border: none;
+        background-color: beige;
     }
     .verdeclaro{background-color: beige;
     background-image: none;}
@@ -626,37 +725,53 @@ height: 120%;
         
          "l1 l2";
  grid-template-columns: 1fr 2fr;
+ align-items: center;
+        }
+
+        
+        .beneficio1{
+            background-color: darkgray;
+            color: rgb(136, 130, 130);
+        }
+        .beneficio1::before{
+            background-image: conic-gradient(
+            aquamarine 20deg,
+            transparent 120deg);
+        }
+        .beneficio1::after{
+            background: beige;
+            color: rgb(59, 57, 57);
+        }
+        .beneficio2{
+            background-color: darkgray;
+            color: rgb(136, 130, 130);
+        }
+        .beneficio2::before{
+            background-image: conic-gradient(
+            aquamarine 20deg,
+            transparent 120deg);
+        }
+        .beneficio2::after{
+            background: beige;
+            color: rgb(59, 57, 57);
+        }
+        .beneficio3{
+            background-color: darkgray;
+            color: rgb(136, 130, 130);
+        }
+        .beneficio3::before{
+            background-image: conic-gradient(
+            aquamarine 20deg,
+            transparent 120deg);
+        }
+        .beneficio3::after{
+            background: beige;
+            color: rgb(59, 57, 57);
         }
     }
 
 
-/* sobre mi */
-.sobriMiGridLayout{
-    padding-top: var(--marginelementos);
-    display: flex;
-    justify-content:space-evenly;
-    flex-wrap: wrap;
-    align-items: center;
 
 
-}
-.caja{
-    height: auto;
-    width: 20em;
-    border: solid 0.2em aquamarine;
-    display: grid;
-    grid-template-areas:
-    "h2"
-    "p";
-    margin: 1em;
-    padding: 0.5em;
-}
-.caja h2{
-    grid-area: h2;
-}
-.caja p{
-    grid-area: p;
-}
-.sim{
-    size: 5em;
-}
+
+
