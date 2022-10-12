@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
 *{
 margin: 0;
 padding: 0;
@@ -13,7 +14,7 @@ box-sizing: border-box;
 --marginelementos: 2.5em;}
 
 .verdeclaro {
-background-color: aquamarine;
+background-image: radial-gradient(circle at 12.5% 12.5%, #d3ffce 0, #c4fece 12.5%, #b5f2cc 25%, #a7e4c7 37.5%, #9bd4c0 50%, #91c4b7 62.5%, #89b5af 75%, #84a9a7 87.5%, #809fa0 100%);
 }
 .nombre-pagina{
     text-align: right;
@@ -42,7 +43,7 @@ body{
 /* declaro nombre de las areas para la grilla */
 header{
     grid-area: header;
-    
+
     font-size: large;}
 .section{
     grid-area: contenido;
@@ -56,28 +57,30 @@ footer{
 .gridLayout{
     gap: 0.625em;
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
     "header"
     "contenido"
     "informacion"
     "footer";}
-    
+
 /* continuacion del header*/
     .hero{
-        height: 4.5em;
-        background-color: aquamarine;
+        height: 5em;
+        background-color: darkgray;
         background-position: center;
         background-size: cover;
         text-align: center;
         display: flex;
+        background-image:radial-gradient(circle at 12.5% 12.5%, #d3ffce 0, #c4fece 12.5%, #b5f2cc 25%, #a7e4c7 37.5%, #9bd4c0 50%, #91c4b7 62.5%, #89b5af 75%, #84a9a7 87.5%, #809fa0 100%);
     }
     .contenedor-textos{
         padding: 0;
-        height: 100%;
+        height:100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background-position: bottom;
 }
 .hero h1{
 font-size: 2.25em;
@@ -101,19 +104,23 @@ text-decoration: none;
 border-radius: 1.25em;
 align-items: center;
 justify-content: center;}
+.boton:hover,
+.boton:focus{
+    background: aqua;
+    color: #fff;
+    transition: background-color 1s ease-out ;
+    outline: 0;}
 /* main */
 .titulo-seccion{
     text-align: center;
     font-size: 2.188em;
-    color: ghostwhite;
-    border: 5px  solid;
+    border: 0.1em solid aquamarine;
 }
 .copy{
     text-align: center;
-    color: beige;
     margin: 1.25em 0;
     font-size: 1.5em;
-    border: 2px solid;
+    border: 0.2em solid aquamarine;
 }
 .beneficios {
     padding-top: var(--marginelementos);
@@ -123,11 +130,12 @@ justify-content: center;}
     align-items: center;
 
 }
-.beneficio{
+
+.beneficio1{
+    position: relative;
     font-size: 1.25em;
     width: 10em;
     height: 10em;
-    /* aca puedo poner una imagen tambien */
     background-color: aquamarine;
     background-size: auto;
     background-position: center;
@@ -137,8 +145,136 @@ justify-content: center;}
     justify-content: center;
     border-radius: 3%;
     text-align: center;
-    margin:  0.313em; 
+    margin:  0.313em;
+    overflow: hidden;
 }
+
+.beneficio1::before{
+    content: "";
+    background-image: conic-gradient(
+        darkgray 20deg,
+        transparent 120deg
+    );
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    animation: rotate 2s linear infinite;
+}
+.beneficio1::after{
+    content: "Costo beneficio";
+    width: 190px;
+    height: 190px;
+    background: darkgray;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aquamarine;
+    font-size: larger;
+    letter-spacing: 5px;
+    box-shadow: inset 20px 20px 20px #0000008c;
+}
+.beneficio2{
+    position: relative;
+    font-size: 1.25em;
+    width: 10em;
+    height: 10em;
+    background-color: aquamarine;
+    background-size: auto;
+    background-position: center;
+    color: rgb(136, 130, 130);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3%;
+    text-align: center;
+    margin:  0.313em;
+    overflow: hidden;
+}
+
+.beneficio2::before{
+    content: "";
+    background-image: conic-gradient(
+        darkgray 20deg,
+        transparent 120deg
+    );
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    animation: rotate 2s linear infinite;
+}
+.beneficio2::after{
+    content: "Atencion Personalizada al cliente";
+    align-content: center;
+    width: 190px;
+    height: 190px;
+    
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: darkgray;
+    color: aquamarine;
+    font-size: 20px;
+    letter-spacing: 5px;
+    box-shadow: inset 20px 20px 20px #0000008c;
+}
+.beneficio3{
+    position: relative;
+    font-size: 1.25em;
+    width: 10em;
+    height: 10em;
+    background-color: aquamarine;
+    background-size: auto;
+    background-position: center;
+    color: rgb(136, 130, 130);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3%;
+    text-align: center;
+    margin:  0.313em;
+    overflow: hidden;
+}
+
+.beneficio3::before{
+    content: "";
+    background-image: conic-gradient(
+        darkgray 20deg,
+        transparent 120deg
+    );
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    animation: rotate 2s linear infinite;
+}
+.beneficio3::after{
+    content: "Garantia";
+    width: 190px;
+    height: 190px;
+    background: darkgray;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aquamarine;
+    font-size: larger;
+    letter-spacing: 5px;
+    box-shadow: inset 20px 20px 20px #0000008c;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+
 .a{
     display: flex;
     justify-content: center;
@@ -189,7 +325,7 @@ transition: .2s;
 }
 
 .section-contacto{
-    
+
 padding: 0 1.5em;
 }
 .contenido{
@@ -215,9 +351,29 @@ padding: 0 1.5em;
 .formulario {
     background: aquamarine;
 }
-.formulario form{
+.formulario form {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "bloqueUno "
+    "bloqueDos "
+    "bloqueTres"
+    "bloqueCuatro";
+}
+.bloqueUno{
+    grid-area: bloqueUno;
+}
+.bloqueDos{
+    grid-area: bloqueDos;
+}
+.bloqueTres{
+    grid-area: bloqueTres;
+}
+.bloqueCuatro{
+    grid-area: bloqueCuatro;
+}
+.formulario form .bloque{
+    grid-column: 1/3;
 }
 .formulario form .block{
     grid-column: 1/3;
@@ -258,7 +414,7 @@ padding: 0 1.5em;
 .contact-info h4,
 .contact-info ul,
 .contact-info p{
-text-align: center; 
+text-align: center;
 margin: 0 0 1rem 0;
 }
 .contact-info ul{
@@ -294,7 +450,83 @@ background-color: #bd081c;
 .redes-container ul li .linkedin:hover{
 background-color: #0077B5;
 }
+/* obras y proyectos*/
+.decoration{
+    background-color: aquamarine;
+    margin: 2em;
+    border: solid 0.05em;
+    
+ }
 
+ /* obrasyproyectos */
+.gridLayoutObras{
+    display: grid;
+    grid-template-areas: 
+    "subtituloUno "
+    "hogares"
+    "subtituloDos"
+    "otrasObras";
+    grid-template-columns: 1fr;
+    margin: 3em;
+}
+.hogares{
+    margin-top: 0;
+    padding-top: 0%;
+    grid-area: hogares;
+    margin: 0.2em;
+    padding: 0%;
+
+}
+.otrasObras{
+    margin-top: 0;
+    padding-top: 0%;
+    grid-area: otrasObras;
+    margin: 0.2em;
+    padding: 0%;
+}
+
+.subtituloUno{
+    grid-area:subtituloUno ;
+    margin-bottom: 0%;
+    margin: 0.2em;
+    padding: 0%;
+    padding: 0%;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+.subtituloDos{
+    grid-area:subtituloDos ;
+    margin-bottom: 0%;
+    margin: 0.2em;
+    padding: 0%;
+    padding: 0%;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;}
+
+/* prestaciones */
+.layoutPrestaciones{
+    display: grid;
+    grid-template-areas:
+    "l1 "
+    "l2";
+    grid-template-columns: 1fr;
+ 
+}
+.layoutPrestaciones div{
+    margin: 1em;
+}
+.l1{
+    grid-area: l1;
+}
+.l2{
+    grid-area:l2 ;
+}
+
+.boxi{
+    display: flex;
+    flex-direction: column;
+    border: solid 5px aquamarine;
+}
 @media (min-width: 700px) {
     body{
         background-color: beige;
@@ -314,6 +546,9 @@ background-color: #0077B5;
 .hero{
     height: 31.25em;
     background-color: darkgrey;}
+.contenedor-textos{
+height: 120%;
+    }
     .titulo-seccion{
         color: var(--colortitulos);
         border: none;
@@ -322,7 +557,8 @@ background-color: #0077B5;
         color: rgb(136, 130, 130);
         border: none;
     }
-    .verdeclaro{background-color: beige;}
+    .verdeclaro{background-color: beige;
+    background-image: none;}
     .formulario {
         background: beige;
     }
@@ -354,5 +590,73 @@ background-color: #0077B5;
     .contact-info{
         background: aquamarine;
     }
-    
+    .formulario form {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "bloqueUno bloqueDos"
+        "bloqueTres bloqueCuatro";
+    }
+    .bloqueUno{
+        grid-area: bloqueUno;
+    }
+    .bloqueDos{
+        grid-area: bloqueDos;
+    }
+    .bloqueTres{
+        grid-area: bloqueTres;
+    }
+    .bloqueCuatro{
+        grid-area: bloqueCuatro;
+    }
+    .decoration{
+        background-color: darkgray;
+        margin: 2em;
+        border: solid 0.05em;}
+        .gridLayoutObras{
+            
+            grid-template-areas: 
+            "subtituloUno subtituloDos"
+            "hogares otrasObras";
+            grid-template-columns: 2fr 1fr;
+            
+        }
+        .layoutPrestaciones{
+        
+        grid-template-areas:
+        
+         "l1 l2";
+ grid-template-columns: 1fr 2fr;
+        }
+    }
+
+
+/* sobre mi */
+.sobriMiGridLayout{
+    padding-top: var(--marginelementos);
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+
+
+}
+.caja{
+    height: auto;
+    width: 20em;
+    border: solid 0.2em aquamarine;
+    display: grid;
+    grid-template-areas:
+    "h2"
+    "p";
+    margin: 1em;
+    padding: 0.5em;
+}
+.caja h2{
+    grid-area: h2;
+}
+.caja p{
+    grid-area: p;
+}
+.sim{
+    size: 5em;
 }
