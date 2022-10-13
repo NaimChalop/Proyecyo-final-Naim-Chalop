@@ -6,12 +6,14 @@
     align-items: center;
 
 }
-
+@mixin size {
+    height: 10em;
+    width: 10em;
+}
 .beneficio1{
     position: relative;
     font-size: 1.25em;
-    width: 10em;
-    height: 10em;
+    @include size();
     background-color: $messi;
     background-position: center;
     color: rgb(136, 130, 130);
@@ -50,8 +52,7 @@ content: "Costo beneficio";
 .beneficio2{
     position: relative;
     font-size: 1.25em;
-    width: 10em;
-    height: 10em;
+    @include size();
     background-color: $messi;
     color: rgb(136, 130, 130);
     display: flex;
@@ -89,8 +90,7 @@ content: "Costo beneficio";
 .beneficio3{
     position: relative;
     font-size: 1.25em;
-    width: 10em;
-    height: 10em;
+    @include size();
     background-color: $messi;
 
     color: rgb(136, 130, 130);
