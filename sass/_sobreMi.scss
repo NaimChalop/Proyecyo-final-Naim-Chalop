@@ -1,0 +1,25 @@
+.sobriMiGridLayout{
+    padding-top: $marginelementos;
+    display: grid; 
+grid-template-areas: 
+"cajaUno"
+"cajaDos"
+"cajaTres";
+justify-content: center;
+align-items: center;
+padding: 1em;margin: 1em;
+}
+.cajaUno{
+    grid-area: cajaUno;padding: 1em;margin: 3em;
+    border: solid 5px $messi;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+.cajaDos{
+    @extend .cajaUno;
+    grid-area: cajaDos;
+}
+.cajaTres{
+    @extend .cajaUno;
+    grid-area: cajaTres;
+}

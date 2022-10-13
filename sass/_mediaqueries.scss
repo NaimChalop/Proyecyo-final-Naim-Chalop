@@ -1,0 +1,212 @@
+@media (min-width: 500px){
+    /*generales*/
+    body{
+        background-color: $messi;
+    }
+    .copy,.titulo-seccion{
+        background-color: $cristiano;
+        border:solid 5px $neymar;
+        color: $neymar;
+        padding: 1em;
+        font-weight: normal;}
+    /*index*/
+    .beneficio3::after, .beneficio1::after, .beneficio2::after{
+            color: $neymar;}
+    
+    /*sobreMi*/
+    .sobriMiGridLayout{
+    grid-template-areas: 
+        "cajaUno "
+        "cajaDos"
+        "cajaTres";
+    grid-template-columns: 1fr;}
+    .cajaUno{border:$neymar solid 5px;
+                background-color: $cristiano;
+                color: $neymar;
+            }
+    .cajaDos{
+                border:$neymar solid 5px;
+                background-color: $cristiano;
+                color: $neymar;
+            }
+    .cajaTres{border: $neymar solid 5px;
+                background-color: $cristiano;
+                color: $neymar;
+            }
+    /*prestaciones*/
+    .boxi{
+                
+                border: solid 5px $neymar;
+                background-color: $cristiano;
+                
+            }
+    /*obrasYproyectos*/
+            .decoration{
+                background-color: beige;
+                margin: 2em;
+                border: solid 0.05em;}
+    /*contacto*/
+    .envoltorio-contacto{
+                    border: solid $neymar .4em;
+                }
+        .formulario{
+                    background-color: $neymar;
+                }
+            
+}
+
+@media (min-width: 800px) {
+    /*generales*/
+body{
+        background-color: beige;
+}
+    /*index*/
+.contenedor-imagenes{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+img{
+    display: block;
+    width: 30%;
+    box-shadow: 0 0 0.5em rgb(0, 0, 0, .4);
+    margin-bottom: var(--marginelementos);
+}}
+.hero{
+    height: 31.25em;
+    background-color: $cristiano;}
+.contenedor-textos{
+    height: 120%;
+}
+.titulo-seccion{
+    color: var(--colortitulos);
+    border: none;
+    background-color: beige;
+}
+.copy{
+    color: rgb(136, 130, 130);
+    border: none;
+    background-color: beige;
+}
+.verdeclaro{background-color: beige;
+    background-image: none;}
+    .beneficio1{
+        background-color: $cristiano;
+        color: rgb(136, 130, 130);
+    }
+    .beneficio1::before{
+        background-image: conic-gradient(
+        $messi 20deg,
+        transparent 120deg);
+    }
+    .beneficio1::after{
+        background: beige;
+        color: rgb(59, 57, 57);
+    }
+    .beneficio2{
+        background-color: $cristiano;
+        color: rgb(136, 130, 130);
+    }
+    .beneficio2::before{
+        background-image: conic-gradient(
+        $messi 20deg,
+        transparent 120deg);
+    }
+    .beneficio2::after{
+        background: beige;
+        color: rgb(59, 57, 57);
+    }
+    .beneficio3{
+        background-color: $cristiano;
+        color: rgb(136, 130, 130);
+    }
+    .beneficio3::before{
+        background-image: conic-gradient(
+        $messi 20deg,
+        transparent 120deg);
+    }
+    .beneficio3::after{
+        background: beige;
+        color: rgb(59, 57, 57);
+    }
+/*prestaciones*/
+.boxi{
+    border: solid 5px $cristiano;
+    background-color: beige;}
+/*sobreMi*/
+.sobriMiGridLayout{
+    grid-template-areas: 
+    "cajaUno cajaDos"
+    "cajaUno cajaTres";
+    grid-template-columns: 1.4fr 1fr;}
+    .cajaUno{border:$cristiano solid 5px;
+        background-color: beige;
+        color: $cristiano;
+    }
+    .cajaDos{border:$cristiano solid 5px;
+        background-color: beige;
+        color: $cristiano;
+    }
+    .cajaTres{border:$cristiano solid 5px;
+        background-color: beige;
+        color: $cristiano;
+    }
+/*contacto*/
+    .formulario {
+    background: beige;
+    form {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "bloqueUno bloqueDos"
+    "bloqueTres bloqueCuatro";
+    button,
+    input,
+    textarea{
+    border-bottom: 1px solid $messi;
+}
+button{
+    background: $messi;
+}}}
+.section-contacto{
+        padding: 0 4rem;
+}
+.envoltorio-contacto{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        border: solid $cristiano .4em;
+}
+.envoltorio-contacto > * {
+        padding: 2em;
+}
+.contact-info h4,
+.contact-info ul,
+.contact-info p{
+        padding: 1em;
+        text-align: left;}
+.contact-info{
+        background: $messi;}
+.bloqueUno{
+        grid-area: bloqueUno;}
+.bloqueDos{
+        grid-area: bloqueDos;}
+.bloqueTres{
+        grid-area: bloqueTres;}
+.bloqueCuatro{
+        grid-area: bloqueCuatro;}
+/*obrasYproyectos*/
+.decoration{
+        background-color: $cristiano;
+        margin: 2em;
+        border: solid 0.05em;}
+    .gridLayoutObras{
+
+    grid-template-areas: 
+        "subtituloUno subtituloDos"
+        "hogares otrasObras";
+    grid-template-columns: 2fr 1fr;}
+.layoutPrestaciones{
+    grid-template-areas:
+        "l1 l2";
+grid-template-columns: 1fr 2fr;
+align-items: center;
+}}

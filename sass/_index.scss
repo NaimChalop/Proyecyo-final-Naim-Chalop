@@ -1,0 +1,149 @@
+.beneficios {
+    padding-top: $marginelementos;
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.beneficio1{
+    position: relative;
+    font-size: 1.25em;
+    width: 10em;
+    height: 10em;
+    background-color: $messi;
+    background-position: center;
+    color: rgb(136, 130, 130);
+    border-radius: 3%;
+    margin:  0.313em;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before{
+        content: "";
+        background-image: conic-gradient(
+            $cristiano 20deg,
+            transparent 120deg
+        );
+        width: 150%;
+        height: 150%;
+        position: absolute;
+        animation: rotate 2s linear infinite;
+    }
+        &::after{
+content: "Costo beneficio";
+    width: 190px;
+    height: 190px;
+    background: $cristiano;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:  $messi;
+    font-size: larger;
+    letter-spacing: 5px;
+    box-shadow: inset 20px 20px 20px #0000008c;
+}}
+.beneficio2{
+    position: relative;
+    font-size: 1.25em;
+    width: 10em;
+    height: 10em;
+    background-color: $messi;
+    color: rgb(136, 130, 130);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3%;
+    margin:  0.313em;
+    overflow: hidden;
+    &::before{
+    content: "";
+    background-image: conic-gradient(
+        $cristiano 20deg,
+        transparent 120deg);
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    animation: rotate 2s linear infinite;
+    }
+    &::after{
+    content: "Atencion Personalizada al cliente";
+    align-content: center;
+    width: 190px;
+    height: 190px;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $cristiano;
+    color: $messi;
+    font-size: 20px;
+    letter-spacing: 5px;
+    box-shadow: inset 20px 20px 20px #0000008c;
+    }}
+.beneficio3{
+    position: relative;
+    font-size: 1.25em;
+    width: 10em;
+    height: 10em;
+    background-color: $messi;
+
+    color: rgb(136, 130, 130);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3%;
+    margin:  0.313em;
+    overflow: hidden;
+
+    &::before{
+    content: "";
+    background-image: conic-gradient(
+    $cristiano 20deg,
+    transparent 120deg);
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    animation: rotate 2s linear infinite;}
+    &::after{
+    content: "Garantia";
+    width: 190px;
+    height: 190px;
+    background: $cristiano;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $messi;
+    font-size: larger;
+    letter-spacing: 5px;
+    box-shadow: inset 20px 20px 20px #0000008c;
+    }}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+.contenedor-imagenes{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    img{
+        display: block;
+        width: 75%;
+        box-shadow: 0 0 0.5em rgb(0, 0, 0, .4);
+        margin-bottom: $marginelementos;
+    }}
+

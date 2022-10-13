@@ -1,0 +1,23 @@
+.layoutPrestaciones{
+    display: grid;
+    grid-template-areas:
+    "l1 "
+    "l2";
+    grid-template-columns: 1fr;
+}
+.layoutPrestaciones div{
+    margin: 1em;
+}
+.l1{
+    grid-area: l1;font-weight: 0%;
+    }
+.l2{
+    grid-area:l2  ;font-weight: 0%;
+}
+
+.boxi{
+    display: flex;
+    flex-direction: column;
+    border: solid 5px $messi;
+    padding: 0.5em; 
+}
