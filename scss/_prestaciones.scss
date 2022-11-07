@@ -1,0 +1,23 @@
+.layout-prestaciones {
+    display: grid;
+    grid-template-areas: "div-dos";
+    grid-template-columns: 1fr;
+    
+    
+    div {
+    margin: 1em;
+    }}
+    
+    
+    
+    .div-dos {
+    grid-area: div-dos;
+    font-weight: 0%;
+    }
+    
+    .boxi {
+    display: flex;
+    flex-direction: column;
+    border: solid 5px $aquamarine;
+    padding: 0.5em;
+    }

@@ -1,0 +1,26 @@
+.sobre-mi-grid-layout{
+    padding-top: 2.5em;
+    display: grid;
+    grid-template-areas: "caja-uno" "caja-dos" "caja-tres";
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin: 1em;
+    }
+    @mixin primer($argumento1, $argumento2, $argumento3,$argumento4,$argumento5,$argumento6,){
+        grid-area:$argumento1;
+        padding: $argumento2;
+        margin: $argumento3;
+        border: $argumento4;
+        font-weight: $argumento5;
+        font-size: $argumento6;
+    }
+    
+    .caja-uno {
+    @include primer( caja-uno, 1em, 3em, solid 5px $aquamarine, normal, 1.2em);}
+    
+    .caja-dos {
+        @include primer( caja-dos, 1em, 3em, solid 5px $aquamarine, normal, 1.2em);}
+    
+    .caja-tres {
+        @include primer( caja-tres, 1em, 3em, solid 5px $aquamarine, normal, 1.2em);}

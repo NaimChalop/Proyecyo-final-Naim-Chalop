@@ -1,0 +1,44 @@
+$aquamarine: aquamarine;
+$darkgray: darkgray;
+$aliceblue:aliceblue;
+$beige:beige;
+@mixin segundo ($argumento1, $argumento2, $argumento3,$argumento4,$argumento5,$argumento6){
+    margin-top: $argumento1;
+    padding-top: $argumento2;
+    grid-area: $argumento3;
+    margin: $argumento4;
+    padding: $argumento5;
+    font-size: $argumento6;
+}
+
+@mixin tercero($argumento1, $argumento2, $argumento3,$argumento4,$argumento5,$argumento6,$argumento7){
+    grid-area: $argumento1;
+    margin: $argumento2;
+    margin-bottom: $argumento3;
+    padding: $argumento4;
+    padding-top: $argumento5;
+    padding-bottom: $argumento6;
+    border-bottom: $argumento7;
+}
+.decoration {
+background-color: $aquamarine;
+margin: 2em;
+border: solid 0.25rem $aquamarine;
+}
+
+.grid-layout-obras {
+display: grid;
+grid-template-areas: "subtitulo-uno" "obras" "subtitulo-dos" "otras-obras";
+grid-template-columns: 1fr;
+margin: 2em;
+}
+
+.obras {@include segundo(0, 0%, obras , 0.2em, 0%,1em);}
+
+.otras-obras {@include segundo(0, 0%, otras-obras , 0.2em, 0%,1em);
+}
+
+.subtitulo-uno { @include tercero( subtitulo-uno,0.2em,0%,0%,0.2em,0.2em,solid 5px $aquamarine);
+}
+
+.subtitulo-dos {@include tercero( subtitulo-dos,0.2em,0%,0%,0.2em,0.2em,solid 5px $aquamarine);}

@@ -1,0 +1,197 @@
+$aquamarine: aquamarine;
+$darkgray: darkgray;
+$aliceblue:aliceblue;
+$beige:beige;
+.beneficios {
+    padding-top: 1em 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.beneficio-uno {
+    position: relative;
+    font-size: 1.25em;
+    width: 10em;
+    height: 10em;
+    background-color: $aquamarine;
+    background-position: center;
+    color: rgb(136, 130, 130);
+    border-radius: 3%;
+    margin: 0.313em;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.beneficio-uno::before {
+    content: "";
+    background-image: conic-gradient($darkgray 20deg, transparent 120deg);
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    -webkit-animation: rotate 2s linear infinite;
+            animation: rotate 2s linear infinite;
+}
+.beneficio-uno::after {
+    content: "Costo beneficio";
+    width: 190px;
+    height: 190px;
+    background: $darkgray;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $aquamarine;
+    font-size: larger;
+    letter-spacing: 5px;
+    box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.5490196078);
+}
+
+.beneficio-dos {
+    @extend.beneficio-uno
+}
+.beneficio2::before {
+    content: "";
+    background-image: conic-gradient($darkgray 20deg, transparent 120deg);
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    -webkit-animation: rotate 2s linear infinite;
+            animation: rotate 2s linear infinite;
+}
+.beneficio-dos::after {
+    content: "Atención personalizada al cliente";
+    align-content: center;
+    width: 190px;
+    height: 190px;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $darkgray;
+    color: $aquamarine;
+    font-size: 20px;
+    letter-spacing: 5px;
+    box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.5490196078);
+}
+
+.beneficio-tres {
+    @extend.beneficio-uno
+}
+.beneficio-tres::before {
+    content: "";
+    background-image: conic-gradient($darkgray 20deg, transparent 120deg);
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    -webkit-animation: rotate 2s linear infinite;
+            animation: rotate 2s linear infinite;
+}
+.beneficio-tres::after {
+    content: "Garantía";
+    width: 190px;
+    height: 190px;
+    background: $darkgray;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $aquamarine;
+    font-size: larger;
+    letter-spacing: 5px;
+    box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.5490196078);
+}
+@-webkit-keyframes rotate {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(-360deg);
+}
+}
+
+@keyframes rotate {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(-360deg);
+}
+}
+.contenedor-imagenes {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    
+    img {
+    display: block;
+    width: 75%;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.4);
+    
+    margin-bottom: 2.5em;
+    
+}}
+    
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    .contenedor {
+        width: 90%;
+        
+        padding: 1em 0;
+        
+        max-width: 75em;
+        margin: auto;
+        overflow: hidden;
+        }
+        
+        header {
+        grid-area: header;
+        font-size: large;
+        }
+        
+        .section {
+        grid-area: contenido;
+        }
+        
+        .sectionn {
+        grid-area: informacion;
+        }
+        
+        footer {
+        grid-area: footer;
+        }
+        
+        .grid-layout {
+        gap: 0.625em;
+        display: grid;
+        grid-template-areas: "header" "contenido" "informacion" "footer";
+        }
+        .titulo-seccion {
+            text-align: center;
+            font-size: 2.188em;
+            border: 0.1em solid $aquamarine;
+            }
+            .copy {
+                text-align: center;
+                margin: 1.25em 0;
+                font-size: 1.5em;
+                border: 0.2em solid $aquamarine;
+                }
+                
+                .a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 5%;
+                height: 3%;
+                }            

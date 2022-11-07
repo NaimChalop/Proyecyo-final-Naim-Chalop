@@ -1,0 +1,276 @@
+$degradado:radial-gradient(circle at 12.5% 12.5%,
+#d3ffce 0, #c4fece 12.5%, #b5f2cc 25%, #a7e4c7 37.5%, #9bd4c0 50%,
+#91c4b7 62.5%, #89b5af 75%, #84a9a7 87.5%, #809fa0 100%);
+$aquamarine: aquamarine;
+$darkgray: darkgray;
+$aliceblue:aliceblue;
+$beige:beige;
+$darkgrey: darkgrey;
+
+@mixin cuarto ($argumento1, $argumento2, $argumento3){
+    border: $argumento1;
+    background-color: $argumento2;
+    color: $argumento3;
+}
+
+@media (min-width: 500px) {
+    /*generales*/
+    body {
+        background-color:$aquamarine;
+    }
+    .copy, .titulo-seccion {
+        background-color: $darkgrey;
+        border: solid 5px $aliceblue;
+        color: $aliceblue;
+        padding: 1em;
+        font-weight: normal;
+    }
+    .hero {
+        height: 23em;
+        width: 90%;
+        background-color: $darkgray;
+        border: solid 5px $aliceblue;
+        background-size: cover;
+        text-align: center;
+        display: flex;
+        h1 {
+        font-size: 2.25em;
+        font-weight: 700;
+        margin-bottom: 1.875em;
+    color: $aliceblue;}
+        p {
+        font-size: 1.5em;
+        font-weight: 400;
+        margin-bottom: 2.5em;
+        color: $aliceblue;
+        }}
+    /*index*/
+    .beneficio-uno,.beneficio-dos,.beneficio-tres{
+        background-color: $aliceblue;
+    }
+    .beneficio-tres::after, .beneficio-uno::after, .beneficio-dos::after {
+        color: $aliceblue;
+    }
+    /*sobre-mi*/
+    .sobre-mi-grid-layout {
+        grid-template-areas: "caja-uno" "caja-dos" "caja-tres";
+        grid-template-columns: 1fr;
+    }
+    .caja-uno {@include cuarto($aliceblue solid 5px,$darkgray,$aliceblue);}
+    .caja-dos {@include cuarto($aliceblue solid 5px,$darkgray,$aliceblue);}
+    .caja-tres {@include cuarto($aliceblue solid 5px,$darkgray,$aliceblue);}
+    /*prestaciones*/
+    .boxi {
+        border: solid 5px $aliceblue;
+        background-color: $darkgray;}
+    
+    /*obras-y-proyectos*/
+    .decoration {
+        background-color: $aliceblue;
+        margin: 2em;
+        border: solid 0.25em $aliceblue;
+    }
+    .subtitulo-uno{
+        border-bottom: solid 5px  $darkgray;
+    }
+    .subtitulo-dos{
+        border-bottom: solid 5px $darkgray;
+    }
+    /*contacto*/
+    .envoltorio-contacto {
+        border: solid $aliceblue 0.4em;
+    }
+    .formulario {
+        background-color: $aliceblue;
+    }
+    .logo-contacto {
+        text-align: center;
+        font-size: 3em;
+        span {
+        color: $aliceblue;
+        }}}
+    
+    @media (min-width: 800px) {
+    /*generales*/
+    body {
+        background-color: $beige;
+    }
+    /*index*/
+    .contenedor-imagenes {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+    
+    img {
+        display: block;
+        width: 30%;
+        box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.4);
+        margin: 0.5em;
+    margin-bottom: 3em;
+    }}
+    .hero {
+        height: 31.25em;
+        background-image: $degradado;
+    border: none;
+margin: 0%;
+width: 100%;    h1 {
+    font-size: 2.25em;
+    font-weight: 700;
+    margin-bottom: 1.875em;
+    color: rgba(22, 20, 20, 0.849);}
+    p {
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-bottom: 2.5em;
+    color: rgba(22, 20, 20, 0.849);
+    }}
+
+
+    .contenedor-textos {
+        height: 120%;
+    }
+    .titulo-seccion {
+        
+        color: #009ba777;
+        
+        border: none;
+        background-color: $beige;
+    }
+    .copy {
+        color: rgba(0, 0, 0, 0.774);
+        border: none;
+        background-color: $beige;
+    }
+    .verde-claro {
+        background-color: $beige;
+        background-image: none;
+    }
+    .beneficio-uno {
+        background-color: $darkgray;
+        color: rgb(136, 130, 130);}
+        .beneficio-uno::before {
+        background-image: conic-gradient($aquamarine 20deg, transparent 120deg);
+    }
+    .beneficio-uno::after {
+        background: $beige;
+        color: rgb(59, 57, 57);
+    }
+    .beneficio-dos {
+        background-color: $darkgray;
+        color: rgb(136, 130, 130);}
+        .beneficio-dos::before {
+            background-image: conic-gradient($aquamarine 20deg, transparent 120deg);
+        }
+    .beneficio-dos::after {
+        background: $beige;
+        color: rgb(59, 57, 57);
+    }
+    .beneficio-tres {
+        background-color: $darkgray;
+        color: rgb(136, 130, 130);
+        .beneficio-tres::before {
+            background-image: conic-gradient($aquamarine 20deg, transparent 120deg);
+        }
+    .beneficio-tres::after {
+        background: $beige;
+        color: rgb(59, 57, 57);
+    }} 
+    /*prestaciones*/
+    .boxi {
+        border: solid 5px $darkgray;
+        background-color: $beige;
+    }
+    .layout-prestaciones {
+        grid-template-areas: "div-dos";
+    margin-left: 10em;
+    margin-right: 10em;}
+    /*sobre-mi*/
+    .sobre-mi-grid-layout {
+        grid-template-areas: "caja-uno caja-dos" "caja-uno caja-tres";
+        grid-template-columns: 1.4fr 1fr;
+    }
+    .caja-uno {
+        border: $darkgray solid 5px;
+        background-color:$beige;
+        color: rgba(0, 0, 0, 0.774);
+    }
+    .caja-dos {
+        border: $darkgray solid 5px;
+        background-color: $beige;
+        color: rgba(0, 0, 0, 0.774);
+    }
+    .caja-tres {
+        border: $darkgray solid 5px;
+        background-color: $beige;
+        color: rgba(0, 0, 0, 0.774);
+    }
+    /*contacto*/
+    .formulario {
+        background: $beige;
+    
+        form {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "bloque-uno bloque-dos" "bloque-tres bloque-cuatro";
+        button,
+        input,
+        textarea {
+            border-bottom: 1px solid $aquamarine;
+        }
+        button {
+            background: $aquamarine;
+        }}}
+    .section-contacto {
+        padding: 0 4rem;
+    }
+    .logo-contacto {
+        text-align: center;
+        font-size: 3em;
+        span {
+        color: aquamarine;
+        }}
+    .envoltorio-contacto {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        border: solid darkgray 0.4em;
+    }
+      .envoltorio-contacto > * {
+        padding: 2em;
+    } 
+    .contact-info {
+        background: $aquamarine;
+    h4,
+    ul,
+    p {
+        padding: 1em;
+        text-align: left;
+    }}
+    .bloque-uno {
+        grid-area: bloque-uno;
+    }
+    .bloque-dos {
+        grid-area: bloque-dos;
+    }
+    .bloque-tres {
+        grid-area: bloque-tres;
+    }
+    .bloque-cuatro {
+        grid-area: bloque-cuatro;
+    }
+    /*obras-y-proyectos*/
+    .decoration {
+        background-image: $degradado;
+        margin: 2em;
+        border: solid 0.25rem #809fa0;
+    }
+    .grid-layout-obras {
+        grid-template-areas: "subtitulo-uno subtitulo-dos" "obras otras-obras";
+        grid-template-columns: 2fr 1fr;
+    }
+    .subtitulo-uno {border-bottom: solid 5px #809fa0;
+        margin-left: 9em;
+        margin-right: 9em;}
+    .subtitulo-dos {border-bottom: solid 5px #809fa0;
+            margin-left: 2em;
+            margin-right: 2em;}
+    }
